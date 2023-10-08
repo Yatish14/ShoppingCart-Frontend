@@ -24,7 +24,7 @@ const Header = () => {
 
   const fetchCartItems = () => {
     axios
-      .get("http://localhost:5000/cart-items")
+      .get("https://shoppingcart-backend.onrender.com/cart-items")
       .then((response) => {
         setcart(response.data);
       })
@@ -35,7 +35,7 @@ const Header = () => {
   useEffect(fetchCartItems, [cart]);
 
   const deleteItem = (item) => {
-    axios.delete(`http://localhost:5000/cart-items/${item._id}`)
+    axios.delete(`https://shoppingcart-backend.onrender.com/cart-items/${item._id}`)
     .then((Response) => {
         console.log(Response.data)
         fetchCartItems();

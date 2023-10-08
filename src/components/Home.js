@@ -13,7 +13,7 @@ const Home = () => {
 
   const FetchProductItems = () => {
     axios
-      .get("http://localhost:5000/product-items")
+      .get("https://shoppingcart-backend.onrender.com/product-items")
       .then((response) => {
         console.log("API Data", response.data);
         setData(response.data);

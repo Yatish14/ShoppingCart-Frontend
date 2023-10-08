@@ -11,7 +11,7 @@ export const SingleItem = ({item}) => {
 
   const fetchCartItems = () => {
     axios
-      .get("http://localhost:5000/cart-items")
+      .get("https://shoppingcart-backend.onrender.com/cart-items")
       .then((response) => {
         setcart(response.data);
       })
@@ -23,7 +23,7 @@ export const SingleItem = ({item}) => {
 
   const addItem = () =>
   {
-    axios.post('http://localhost:5000/cart-items', item)
+    axios.post('https://shoppingcart-backend.onrender.com/cart-items', item)
     .then((Response) => {
         console.log(Response.data)
         fetchCartItems();
@@ -35,7 +35,7 @@ export const SingleItem = ({item}) => {
   }
         
   const deleteItem = () => {
-    axios.delete(`http://localhost:5000/cart-items/${item._id}`)
+    axios.delete(`https://shoppingcart-backend.onrender.com/cart-items/${item._id}`)
     .then((Response) => {
         console.log(Response.data)
         fetchCartItems();

@@ -16,7 +16,7 @@ const Cart = () => {
   const [cart, setcart] = useState();
   const fetchCartItems = () => {
     axios
-      .get("http://localhost:5000/cart-items")
+      .get("https://shoppingcart-backend.onrender.com/cart-items")
       .then((response) => {
         setcart(response.data);
       })
@@ -28,7 +28,7 @@ const Cart = () => {
 
   const deleteItem = (item) => {
     axios
-      .delete(`http://localhost:5000/cart-items/${item._id}`)
+      .delete(`https://shoppingcart-backend.onrender.com/cart-items/${item._id}`)
       .then((Response) => {
         console.log(Response.data);
         fetchCartItems();
@@ -52,7 +52,7 @@ const Cart = () => {
       )
     );
     axios
-      .put(`http://localhost:5000/cart-items/${item._id}`, { quantity: newQuantity })
+      .put(`https://shoppingcart-backend.onrender.com/cart-items/${item._id}`, { quantity: newQuantity })
       .then((Response) => {
         console.log(Response.data);
         fetchCartItems();
