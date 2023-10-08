@@ -50,9 +50,9 @@ const Header = () => {
     <Navbar bg="dark" variant="dark" style={{height: 60,marginBottom: 10}}>
         <Container>
             <Navbar.Brand>
-                <Link to = "/" style={{fontSize: 30,color: "white",textDecoration: "none"}}>Shopping Cart</Link>
+                <Link to = "/ShoppingCart-Frontend" style={{fontSize: 30,color: "white",textDecoration: "none"}}>Shopping Cart</Link>
             </Navbar.Brand>
-            {useLocation().pathname!== "/Shopping-Cart/cart" && (
+            {useLocation().pathname!== "/ShoppingCart-Frontend/cart" && (
             <Navbar.Text className="searchbar">
                 <FormControl 
                     placeholder = "Search the Products..."
@@ -90,7 +90,7 @@ const Header = () => {
                                     />
                                 </span>
                             )})}
-                            <Link to="/cart">
+                            <Link to="/ShoppingCart-Frontend/cart">
                                 <Button style={{width: "95%",margin: "0 10px"}}>Go to Cart</Button>
                             </Link>
                         </>
